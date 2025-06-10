@@ -24,7 +24,7 @@ export default function Chat() {
       const data = await res.json();
       setResponse(data.response);
       setSuggestions(data.suggestions || []);
-    } catch (err) {
+    } catch {
       setResponse("Error fetching response.");
     } finally {
       setLoading(false);
